@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+html{
+  font-size: 12px;
+}
 *{
   padding: 0;
   margin: 0;
@@ -8,10 +11,11 @@
 body{
   min-height: 100vh;
   background-color: white;
+  overflow-x: hidden;
 }
 .navbar{
   padding: 4px 8px;
-  background-color: #f9595973;
+  background-color: transparent;
 }
 .nav-link, .navbar-brand{
   font-size: 20px;
@@ -19,12 +23,67 @@ body{
   transition-duration: 0.3s;
 }
 .nav-link{
-  color: white;
+  color: #66666E;
   font-weight: 300;
 }
 .navbar-brand{
-  color: #F95959;
+  color: #66666E;
 }
 .navbar-brand:hover, .nav-link:hover{
   color: #dd2727;
+}
+.headersGroup h1{
+  font-size: 5rem;
+  font-weight: 100;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.img{
+  max-width: 150%;
+  max-height: 110vh;
+}
+.img.img2{
+  transform: translateX(-300px);
+  object-position: 140px;
+}
+.info-section-1 h1{
+  font-size: 3rem;
+}
+.info-section-1 p{
+  font-size: 2rem;
+}
+
+@media(max-width:767px){
+  .img{
+    max-width: 100%;
+    height: auto;
+  }
+  .img.img2{
+    transform: translateX(0px);
+    object-position: 0px;
+  }
+}
+@media(max-width:778px){
+  .nav-link{
+    color: white;
+  }
+  .navbar-brand{
+    color: white;
+  }
+}
+@media(max-width:1200px){
+  .headersGroup h1{
+    font-size: 4rem;
+  }
+  .info-section-1 p{
+    font-size: 2rem;
+  }
+}
+@media(max-width:1000px){
+  .headersGroup h1, .info-section-1 h1{
+    font-size: 3rem;
+  }
+  .info-section-1 p{
+    font-size: 1.5rem;
+  }
 }
