@@ -14,13 +14,24 @@ body{
   overflow-x: hidden;
 }
 .navbar{
-  padding: 4px 8px;
+  padding: 2px 8px;
   background-color: transparent;
+  transition-duration: 0.3s;
+}
+.navbar-scrolled{
+  background-color: #db4141;
+  color: white;
 }
 .nav-link, .navbar-brand{
   font-size: 20px;
   font-weight: bold;
   transition-duration: 0.3s;
+}
+.link-scrolled, .brand-scrolled{
+  color: white !important;
+}
+.link-scrolled:hover, .brand-scrolled:hover{
+  color: rgb(197, 197, 197) !important;
 }
 .nav-link{
   color: #66666E;
@@ -52,7 +63,14 @@ body{
 .info-section-1 p{
   font-size: 2rem;
 }
-
+@media(max-width:778px){
+  .nav-link{
+    color: white;
+  }
+  .navbar-brand{
+    color: white;
+  }
+}
 @media(max-width:767px){
   .img{
     max-width: 100%;
@@ -61,14 +79,6 @@ body{
   .img.img2{
     transform: translateX(0px);
     object-position: 0px;
-  }
-}
-@media(max-width:778px){
-  .nav-link{
-    color: white;
-  }
-  .navbar-brand{
-    color: white;
   }
 }
 @media(max-width:1200px){
@@ -80,10 +90,15 @@ body{
   }
 }
 @media(max-width:1000px){
-  .headersGroup h1, .info-section-1 h1{
+  .headersGroup h1{
     font-size: 3rem;
   }
   .info-section-1 p{
     font-size: 1.5rem;
   }
+}
+@media(max-width:500px){
+  .info-section-1 h1{
+    font-size: 2.5rem;
+  }  
 }
